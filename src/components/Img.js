@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Img = props => (
-  <li className="photo-container">
+  <li >
     <img src={props.url} alt=""/>
   </li>
 );
