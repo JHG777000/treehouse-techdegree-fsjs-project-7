@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 const Nav = () => (
   <div className="main-nav">
     <ul>
-      <li><NavLink to="/dogs">Dogs</NavLink></li>
-      <li><NavLink to="/birds">Birds</NavLink></li>
-      <li><NavLink to="/cats">Cats</NavLink></li>
+      <li><NavLink to="/sunsets">Sunsets</NavLink></li>
+      <li><NavLink to="/fall">Fall</NavLink></li>
+      <li><NavLink to="/desert">Desert</NavLink></li>
     </ul>    
   </div>
 );

@@ -1,8 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 import Main from './Main';
-import NavSearch from './NavSearch';
 import NotFound from './NotFound';
 
 function App() {
@@ -10,8 +9,18 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/:nav" component={Main} />
+          <Route exact path="/">
+           <Redirect to="/sunsets" />
+          </Route>  
+          <Route exact path="/sunsets">
+           <Main query="sunsets" />
+          </Route>
+          <Route exact path="/fall">
+           <Main query="fall" />
+          </Route>
+          <Route exact path="/desert">
+           <Main query="desert" />
+          </Route>
           <Route component={NotFound} />
         </Switch>
       </div>

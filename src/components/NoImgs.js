@@ -1,9 +1,9 @@
 import React from 'react';
 
-const NoImgs = props => (
-  <li className='no-gifs'>
-    <i className="material-icons icon-gif">sentiment_very_dissatisfied</i>
-    <h3>Sorry, no GIFs match your search.</h3>
+const NoImgs = (props) => (
+  <li class="not-found">
+    <h3>No Results Found</h3>
+    <p>You search did not return any results. Please try again.</p>
   </li>
 );
 

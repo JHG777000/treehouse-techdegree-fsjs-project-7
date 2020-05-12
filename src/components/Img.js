@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Img = props => (
-  <li >
-    <img src={props.url} alt=""/>
+  <li>
+    <img src={props.url} alt={props.title}/>
   </li>
 );
 
