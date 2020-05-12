@@ -3,23 +3,23 @@ import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 import Main from './Main';
 import PageNotFound from './PageNotFound';
-
+//Main switch for the App, manages and sets up routes
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
         <Switch>
           <Route exact path="/">
-           <Redirect to="/sunsets" />
-          </Route>  
+            <Redirect to="/sunsets" />
+          </Route>
           <Route exact path="/sunsets">
-           <Main query="sunsets" />
+            <Main query="Sunsets" />
           </Route>
           <Route exact path="/fall">
-           <Main query="fall" />
+            <Main query="Fall" />
           </Route>
           <Route exact path="/desert">
-           <Main query="desert" />
+            <Main query="Desert" />
           </Route>
           <Route component={PageNotFound} />
         </Switch>
