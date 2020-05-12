@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 import Main from './Main';
-import NotFound from './NotFound';
+import PageNotFound from './PageNotFound';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/desert">
            <Main query="desert" />
           </Route>
-          <Route component={NotFound} />
+          <Route component={PageNotFound} />
         </Switch>
       </div>
     </BrowserRouter>

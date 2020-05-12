@@ -2,7 +2,7 @@ import React from 'react';
 
 import Nav from './Nav';
 import SearchForm from './SearchForm';
-import ImgList from './ImgList';
+import Gallery from './Gallery';
 import apiKey from '../config'
 
 export default class Main extends React.Component {
@@ -54,7 +54,7 @@ export default class Main extends React.Component {
         {
             (this.state.loading)
              ? <h1>Loading...</h1>
-             : <ImgList data={this.state.imgs.photo} />
+             : <Gallery data={this.state.imgs.photo} />
           }    
         </div>
       </div>
