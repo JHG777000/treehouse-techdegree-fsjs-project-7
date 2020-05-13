@@ -10,7 +10,7 @@ export default class SearchForm extends Component {
     doSearch: false,
   };
 
-  //updates searchText state when a new Search query is types in by the useer
+  //updates searchText state when a new Search query is types in by the user
   onSearchChange = (e) => {
     this.setState({ searchText: e.target.value });
   };

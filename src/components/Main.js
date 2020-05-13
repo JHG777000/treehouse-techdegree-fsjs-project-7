@@ -29,7 +29,7 @@ export default class Main extends React.Component {
       this.setState({ searchtext: this.props.query });
     }
   }
- 
+
   //use flickr api to search for photos
   performSearch = (query) => {
     this.setState({ loading: true });
@@ -60,7 +60,10 @@ export default class Main extends React.Component {
           {this.state.loading ? (
             <h1>Loading...</h1>
           ) : (
-            <Gallery data={this.state.photos.photo} title={this.state.searchquery}/>
+            <Gallery
+              data={this.state.photos.photo}
+              title={this.state.searchquery}
+            />
           )}
         </div>
       </div>

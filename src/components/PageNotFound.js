@@ -1,6 +1,6 @@
 import React from 'react';
 
-//PageNotFound displays a 404 page not found error when an invalid route is given 
+//PageNotFound displays a 404 page not found error when an invalid route is given
 
 const PageNotFound = () => (
   <div className="main-content not-found">
