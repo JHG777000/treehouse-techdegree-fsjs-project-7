@@ -19,11 +19,10 @@ export default class Main extends React.Component {
   }
 
   componentDidMount() {
-    this.performSearch();
+    this.setState({ searchquery: this.props.query });
   }
 
   //search for photos if this.props.query is not the same as this.state.searchtext
-  //should only happen when a nav route is loaded
   componentDidUpdate() {
     if (this.props.query !== this.state.searchtext) {
       this.performSearch(this.props.query);
@@ -32,7 +31,7 @@ export default class Main extends React.Component {
   }
  
   //use flickr api to search for photos
-  performSearch = (query = 'sunsets') => {
+  performSearch = (query) => {
     this.setState({ loading: true });
     this.setState({ searchquery: query });
     fetch(
@@ -53,7 +52,7 @@ export default class Main extends React.Component {
       <div>
         <div className="main-header">
           <div className="inner">
-            <SearchForm onSearch={this.performSearch} />
+            <SearchForm />
             <Nav />
           </div>
         </div>
